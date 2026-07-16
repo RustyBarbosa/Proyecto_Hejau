@@ -272,7 +272,7 @@ align-items:center;
 
 padding:0 7%;
 
-background:#001f3f;
+background:linear-gradient(90deg, #001f3f 0%, #2563EB 100%);
 
 box-shadow:0 5px 20px rgba(0,0,0,.15);
 
