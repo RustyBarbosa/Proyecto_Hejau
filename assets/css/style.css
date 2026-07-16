@@ -44,13 +44,137 @@ body{
 
 font-family:'Atkinson Hyperlegible',sans-serif;
 
-background:var(--white);
+background:linear-gradient(180deg, #001f3f 0%, #003d66 15%, #006b8f 35%, #00a8cc 65%, #00d4ff 100%);
+
+background-attachment:fixed;
 
 color:var(--text);
 
 line-height:1.8;
 
 font-size:20px;
+
+position:relative;
+
+}
+
+body::before{
+
+content:'';
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background-image:
+  radial-gradient(1px 1px at 20% 30%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 60% 70%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 50% 50%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 80% 10%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 90% 60%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 30% 80%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 10% 90%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 40% 20%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 70% 40%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 15% 60%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 85% 30%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 45% 90%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 75% 75%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 25% 15%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 95% 80%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 35% 45%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 65% 15%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 10% 35%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 55% 65%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 88% 45%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 12% 72%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 78% 88%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 42% 38%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 68% 58%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 22% 92%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 92% 22%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 38% 68%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 58% 28%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 18% 18%, #ffffff, rgba(255,255,255,0)),
+  radial-gradient(1px 1px at 82% 62%, #ffffff, rgba(255,255,255,0));
+
+background-size:
+  200% 200%,
+  150% 150%,
+  180% 180%,
+  160% 160%,
+  170% 170%,
+  190% 190%,
+  210% 210%,
+  140% 140%,
+  175% 175%,
+  155% 155%,
+  185% 185%,
+  195% 195%,
+  165% 165%,
+  145% 145%,
+  220% 220%,
+  135% 135%,
+  198% 198%,
+  162% 162%,
+  172% 172%,
+  152% 152%,
+  188% 188%,
+  178% 178%,
+  148% 148%,
+  192% 192%,
+  132% 132%,
+  215% 215%,
+  168% 168%,
+  158% 158%,
+  138% 138%,
+  182% 182%;
+
+background-position:
+  0% 0%,
+  20% 50%,
+  40% 80%,
+  10% 20%,
+  60% 30%,
+  80% 70%,
+  30% 40%,
+  50% 10%,
+  70% 60%,
+  15% 85%,
+  85% 45%,
+  45% 75%,
+  75% 35%,
+  25% 65%,
+  90% 15%,
+  35% 55%,
+  65% 25%,
+  5% 50%,
+  55% 90%,
+  95% 40%,
+  40% 95%,
+  20% 70%,
+  70% 50%,
+  50% 20%,
+  80% 85%,
+  10% 60%,
+  60% 40%,
+  30% 10%,
+  85% 70%,
+  15% 30%;
+
+background-repeat:no-repeat;
+
+opacity:0.6;
+
+pointer-events:none;
+
+z-index:-1;
 
 }
 
@@ -148,9 +272,9 @@ align-items:center;
 
 padding:0 7%;
 
-background:white;
+background:#001f3f;
 
-box-shadow:0 5px 20px rgba(0,0,0,.05);
+box-shadow:0 5px 20px rgba(0,0,0,.15);
 
 z-index:999;
 
@@ -168,13 +292,15 @@ font-family:'Lexend';
 
 font-weight:700;
 
-color:var(--purple);
+color:#00d4ff;
 
 }
 
 .logo img{
 
-height:42px;
+height:50px;
+
+width:50px;
 
 }
 
@@ -190,15 +316,19 @@ nav a{
 
 font-family:'Lexend';
 
-color:var(--blue-dark);
+color:#00d4ff;
 
 transition:.3s;
+
+font-weight:600;
 
 }
 
 nav a:hover{
 
-color:var(--blue);
+color:#8E6BC7;
+
+text-shadow:0 0 10px rgba(142, 107, 199, 0.5);
 
 }
 
