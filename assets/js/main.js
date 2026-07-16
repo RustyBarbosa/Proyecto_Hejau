@@ -1,0 +1,78 @@
+/* ======================================================
+   Signos Vitales de Misión — Equipo HEJAU
+   SEEC 2026
+   Version 2.0
+======================================================*/
+
+// Navbar con sombra al hacer scroll
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 40) {
+        navbar.style.boxShadow = "0 12px 30px rgba(0,0,0,.08)";
+        navbar.style.height = "74px";
+    } else {
+        navbar.style.boxShadow = "0 5px 20px rgba(0,0,0,.05)";
+        navbar.style.height = "82px";
+    }
+});
+
+// Animación sencilla para las tarjetas
+const cards = document.querySelectorAll(".card, .team-card");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.animate([
+                {
+                    opacity:0,
+                    transform:"translateY(40px)"
+                },
+                {
+                    opacity:1,
+                    transform:"translateY(0px)"
+                }
+            ],{
+                duration:700,
+                easing:"ease-out",
+                fill:"forwards"
+            });
+
+        }
+
+    });
+
+},{
+    threshold:.15
+});
+
+cards.forEach(card=>{
+    observer.observe(card);
+});
+
+// Scroll suave para el menú
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const destino=document.querySelector(this.getAttribute("href"));
+
+        if(destino){
+
+            destino.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+        }
+
+    });
+
+});
+
+console.log("Signos Vitales de Misión — Equipo HEJAU — v2.0");
